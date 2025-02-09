@@ -1,141 +1,162 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/weather"],
-    "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "custom/storage", "cpu", "temperature", "custom/tailscale", "memory", "custom/pacman",
- "tray"],
-    "hyprland/workspaces": {
-         "format": " {icon} ",
-         "format-icons": {
-             "1": "",
-             "2": "󰙯",
-             "3": "",
-             "4": "",
-             "5": "󰨞",
-             "6": "",
-             "7": "",
-             "8": "",
-             "9": "",
-             "10": "十"
-         },
-
-     },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
+  "layer": "top", // Waybar at top layer
+  "position": "bottom", // Waybar position (top|bottom|left|right)
+  // Choose the order of the modules
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/weather"
+  ],
+  "modules-center": [
+    "custom/music"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "clock",
+    "custom/storage",
+    "cpu",
+    "temperature",
+    "custom/tailscale",
+    "memory",
+    "custom/pacman",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "format": " {icon} ",
+    "format-icons": {
+      "1": "",
+      "2": "󰙯",
+      "3": "",
+      "4": "",
+      "5": "󰨞",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "十"
     },
-    "custom/music": {
-        "format": "  {}",
-        "escape": true,
-        "interval": 5,
-        "tooltip": false,
-        "exec": "playerctl metadata --format='{{ title }}'",
-        "on-click": "playerctl play-pause",
-        "max-length": 50
-    },
-    "clock": {
-        "timezone": "Europe/Warsaw",
-        "format-alt": " {:%a %b %d %H:%M}",
-        "format": " {:%H:%M}"
-    },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-alt": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-alt": "{icon}",
-        "format-icons": [
-          "󰁻",
-          "󰁼",
-          "󰁾",
-          "󰂀",
-          "󰂂",
-          "󰁹"
-        ]
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-muted": "",
-        "format-alt": "{icon}",
-        "format-icons": {
-            "default": ["", "", " "]
-    }
-    },
-
-   "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/scripts/storage.sh"
   },
-
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/music": {
+    "format": "  {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ title }}'",
+    "on-click": "playerctl play-pause",
+    "max-length": 50
+  },
+  "clock": {
+    "timezone": "Europe/Warsaw",
+    "format-alt": " {:%a %b %d %H:%M}",
+    "format": " {:%H:%M}"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-alt": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-alt": "{icon}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-alt": "{icon}",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    }
+  },
+  "custom/storage": {
+    "format": "{} ",
+    "format-alt": "{percentage}% ",
+    "format-alt-click": "click-right",
+    "return-type": "json",
+    "interval": 60,
+    "exec": "~/.config/waybar/scripts/storage.sh"
+  },
   "cpu": {
     "format": "{icon} {usage}%",
     "tooltip": false,
     "interval": 1,
     "format-icons": ""
   },
-
-   "temperature": {
-    "tooltip":false,
+  "temperature": {
+    "tooltip": false,
     "thermal-zone": 2,
     "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
     "critical-threshold": 70,
-    "format-critical":  "{icon} {temperatureC}°C",
+    "format-critical": "{icon} {temperatureC}°C",
     "format": "{icon} {temperatureC}°C ",
-    "format-icons":  ""
+    "format-icons": ""
   },
-
   "memory": {
     "format": "{icon} {used}GiB",
     "interval": 1,
-    "tooltip":false,
+    "tooltip": false,
     "format-icons": ""
   },
-
-"custom/tailscale" : {
+  "custom/tailscale": {
     "exec": "~/.config/waybar/scripts/waybar-tailscale.sh --status",
     "on-click": "exec ~/.config/waybar/scripts/waybar-tailscale.sh --toggle",
     "exec-on-event": true,
     "format": "{icon} ",
     "format-icons": {
-        "connected": "󰌆",
-        "stopped": "󰌊",
+      "connected": "󰌆",
+      "stopped": "󰌊",
     },
     "tooltip": true,
     "return-type": "json",
     "interval": 3,
-},
-
-"custom/pacman": {
-  "format": "{icon}{}",
-  "return-type": "json",
-  "format-icons": {
-    "pending-updates": " ",
-    "updated": ""
   },
-  "exec-if": "which waybar-updates",
-  "exec": "waybar-updates"
-},
-
+  "custom/pacman": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": ""
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+  },
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
     "exec": "wttrbar",
     "return-type": "json"
-}
-
+  }
 }
