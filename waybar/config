@@ -4,7 +4,8 @@
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
-    "custom/weather"
+    "custom/weather",
+    "idle_inhibitor"
   ],
   "modules-center": [
     "custom/music"
@@ -35,7 +36,7 @@
       "8": "",
       "9": "",
       "10": "十"
-    },
+    }
   },
   "tray": {
     "icon-size": 21,
@@ -158,5 +159,12 @@
     "interval": 3600,
     "exec": "wttrbar",
     "return-type": "json"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "󰾪"
+    }
   }
 }

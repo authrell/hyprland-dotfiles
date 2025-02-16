@@ -18,9 +18,9 @@ configuration{
 * {
     bg-col:  #282828;
     bg-col-light: #ebdbb2;
-    border-col: #98971a;
+    border-col: #7daea3;
     selected-col: #504945;
-    mauve: #98971a;
+    mauve: #7daea3;
     fg-col: #ebdbb2;
     fg-col2: #fbf1c7;
     grey: #928374;
@@ -35,10 +35,11 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 560px;
-    border: 0px;
+    border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
-  border-radius: 10px;
+    border-radius: 5px;
+
 }
 
 mainbox {

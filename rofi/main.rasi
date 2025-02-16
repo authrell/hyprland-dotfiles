@@ -20,10 +20,10 @@ configuration {
 @import "colors.rasi"
 
 window {
-    transparency:                   "real";
+    transparency:                   0.9;
     background-color:               @bg;
     text-color:                     @fg;
-	border:							2px;
+	border:							1px;
 	border-color:					@br;
     border-radius:                  20px;
 	height:						    46%;

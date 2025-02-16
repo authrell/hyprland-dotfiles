@@ -1,37 +1,40 @@
 * {
   font-family: Iosevka Nerd Font;
-  font-size: 15px;
+  font-size: 17px;
   min-height: 0;
+  font-weight: 500;
 }
 
 #waybar {
   color: #ebdbb2;
-  margin: 5px 5px;
+  margin: 6px 6px;
   background: transparent;
-
 }
 
 #workspaces {
-  border-radius: 15px;
-  padding: 0px 15px;
+  border-radius: 5px;
+  padding: 0px 5px;
   margin: 5px;
   background-color: #282828;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 #workspaces button {
   color: #3c3836;
-  border-radius: 15px;
-  padding: 0.4rem;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 3px
 }
 
 #workspaces button.active {
   color: #7daea3;
-  border-radius: 15px;
+  border-radius: 5px;
+  padding-right: 5px;
 }
 #workspaces button:hover {
   color: #7daea3;
-  border-radius: 15px;
+  border-radius: 5px;
+  padding-right: 10px;
 }
 
 #custom-music,
@@ -45,7 +48,8 @@
 #memory,
 #custom-tailscale,
 #custom-storage,
-#custom-weather
+#custom-weather,
+#idle_inhibitor
 {
   background-color: #282828;
   padding: 0px 8px;
@@ -78,20 +82,20 @@
 
 #pulseaudio {
   color: #cc241d;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 5px 0px 0px 5px;
   margin-left: 15px;
 }
 
 #custom-music {
   color: #7daea3;
-  border-radius: 15px;
+  border-radius: 5px;
   font-weight: bold;
 }
 
 #tray {
-  margin-right: 15px;
-  border-radius: 15px;
-  margin-left: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+  margin-left: 5px
 }
 
 
@@ -114,8 +118,8 @@ color: #98971a
 #memory
 {
   color: #458588;
-  padding-left: 2px;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 5px 5px 0px;
+
 }
 
 #custom-pacman 
@@ -125,13 +129,29 @@ color: #98971a
 
 #custom-tailscale 
 {
-  background-color: #282828;
   color: #689d6a;
   padding-left: 0.5px;
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 #custom-weather
 {
-  border-radius: 15px;
+  border-radius: 5px;
+}
+
+#idle_inhibitor
+{
+ color: #3c3836;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding-right: 13px; 
+}
+
+#idle_inhibitor.activated
+{
+  color: #ebdbb2;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding-right: 15px;
+
 }
